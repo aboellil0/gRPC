@@ -2,7 +2,7 @@
 
 namespace gRPC.Services
 {
-    public class GreeterServices : Greeter.GreeterBase
+    public class GreeterServices 
     {
         private readonly ILogger<GreeterServices> logger;
 
@@ -10,7 +10,5 @@ namespace gRPC.Services
         {
             this.logger = logger;
         }
-
-        public override 
     }
 }

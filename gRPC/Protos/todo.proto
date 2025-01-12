@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+option csharp_namespace = "gRPC.Protos";
+
+service Todo{
+// create
+rpc CreateToDo(CreateToDoReq) returns (CreateToDoRes){}
+
+
+// readsignal
+
+rpc ReadToFo(ReadTodoReq) returns (ReadTodoRes){}
+
+// readlist
+
+
+
+//update
+
+
+
+// delete
+
+}
+
+message CreateToDoReq{
+	string Title = 1;
+	string description = 2;
+}
+
+message CreateToDoRes{
+	int32 id = 1;
+}
+
+
+message ReadTodoReq{
+	int32 id = 1;
+}
+
+message ReadTodoRes{
+	int32 id = 1;
+	string title = 2;
+	string description = 3;
+	string status = 4;
+}
