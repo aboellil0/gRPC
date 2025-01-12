@@ -7,6 +7,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Protos\test.proto" />
+    <None Remove="Protos\todo.proto" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Protobuf Include="Protos\test.proto">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Protobuf>
+    <Protobuf Include="Protos\todo.proto" GrpcServices="Server">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Protobuf>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Grpc.AspNetCore" Version="2.67.0" />
     <PackageReference Include="Grpc.Core" Version="2.46.6" />
     <PackageReference Include="Grpc.Core.Api" Version="2.67.0" />
     <PackageReference Include="Grpc.Net.Client" Version="2.67.0" />
