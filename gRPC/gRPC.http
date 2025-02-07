@@ -1,6 +1,7 @@
 @gRPC_HostAddress = http://localhost:5057
 
-GET {{gRPC_HostAddress}}/weatherforecast/
+GET {{gRPC_HostAddress}}/todoit/
+
 Accept: application/json
 
 ###
